@@ -1,0 +1,128 @@
+ez2_c1_1
+{
+//spawn coop_manager entity
+	create
+	{
+		coop_manager
+		{
+			"classname" "coop_manager"
+			"origin" "-40 756 566"
+			"targetname" "coop_manager1"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//create two spawn points for coop_manager to set later
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-34.062538 454.218750 276.289368;"
+			"targetname" "checkpoint1"
+			"angles" "0 180 0"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-615.031250 406.406250 1992.367554"
+			"targetname" "checkpoint2"
+			"angles" "0 0 0"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "1192.093750 -1216.343872 2128.393066"
+			"targetname" "checkpoint3"
+			"angles" "0 0 0"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "3580.531250 -395.343750 2127.463135"
+			"targetname" "checkpoint4"
+			"angles" "0 180 0"
+		}
+	}
+//teleport point at the elevator
+	create
+	{
+		point_teleport
+		{
+			"classname" "point_teleport"
+			"origin" "-609.656250 496.406250 273.021606"
+			"targetname" "coopfix_teleport1"
+			"target" "!player"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//teleport point at the level end
+	create
+	{
+		point_teleport
+		{
+			"classname" "point_teleport"
+			"origin" "4488 -72 2124"
+			"targetname" "coopfix_teleport2"
+			"target" "!player"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//move spawn after doors close
+	edit
+	{
+		#find_by_origin "-62 202 296"	
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint1,0,-1"				
+		}
+	}
+//teleport everyone to the elevator and set spawn point at the top
+	edit
+	{
+		#find_by_keyfield "hammerid 45356"	
+		values
+		{
+			"OnOpen" "coopfix_teleport1,Teleport,,0,-1"
+			"OnOpen" "coop_manager1,MoveSpawn,checkpoint2,0,-1"				
+		}
+	}
+//move spawn point after pulling the lever
+	edit
+	{
+		#find_by_keyfield "hammerid 490402"	
+		values
+		{
+			"OnPressed" "coop_manager1,MoveSpawn,checkpoint3,0,-1"				
+		}
+	}
+//move spawn point after pressing the button
+	edit
+	{
+		#find_by_keyfield "hammerid 503496"	
+		values
+		{
+			"OnOpen" "coop_manager1,MoveSpawn,checkpoint4,0,-1"				
+		}
+	}
+//teleport everyone behind the closing door
+	edit
+	{
+		#find_by_keyfield "hammerid 261131"	
+		values
+		{
+			"OnOpen" "coopfix_teleport2,Teleport,,0,-1"				
+		}
+	}
+}
