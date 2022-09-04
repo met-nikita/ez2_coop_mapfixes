@@ -1,0 +1,68 @@
+ez2_c0_1
+{
+//spawn coop_manager entity
+	create
+	{
+		coop_manager
+		{
+			"classname" "coop_manager"
+			"origin" "-40 756 566"
+			"targetname" "coop_manager1"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//create two spawn points for coop_manager to set later
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-920 -2096 553.105"
+			"targetname" "checkpoint1"
+			"angles" "0 0 0"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-40 750 566"
+			"targetname" "checkpoint2"
+			"angles" "0 0 0"
+		}
+	}
+//create teleport entity for later use
+	create
+	{
+		point_teleport
+		{
+			"classname" "point_teleport"
+			"origin" "-40 750 566"
+			"targetname" "coopfix_teleport1"
+			"target" "!player"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//edit scripted_sequence playerPuppet_intro_main6 so the spawn point moves after it ends
+	edit
+	{
+		#find_by_origin "-920 -2096 512.237"	
+		values
+		{
+			"OnEndSequence" "coop_manager1,MoveSpawn,checkpoint1,0,-1"				
+		}
+	}
+//edit trigger which closes the doors behind player so all players are teleported inside the room and no one is left behind
+	edit
+	{
+		#find_by_origin "-40 750 566.5"	
+		values
+		{
+			"OnTrigger" "coopfix_teleport1,Teleport,,0,-1"
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"				
+		}
+	}
+}
