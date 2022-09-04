@@ -23,4 +23,4 @@ console { "sv_cheats" "1" }
 
 Fire syntax:
 
-fire { "targetname" "inputname,inputparam,inputdelay,activatorname,callername,outputid"
+fire { "targetname" "inputname,inputparam,inputdelay,activatorname,callername,outputid" }
