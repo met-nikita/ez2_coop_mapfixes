@@ -1,4 +1,4 @@
-ez2_c2_2
+ez2_c1_3
 {
 //spawn coop_manager entity
 	create
@@ -13,5 +13,5 @@ ez2_c2_2
 		}
 	}
 //no backtracking
-	delete {#find_by_keyfield "hammerid 65570"}
+	delete {#find_by_keyfield "hammerid 52334"}
 }

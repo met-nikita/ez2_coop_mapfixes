@@ -14,4 +14,15 @@ ez2_c2_3
 	}
 //no backtracking
 	delete {#find_by_keyfield "hammerid 433194"}
+//default equipment (first start, death)
+	create
+	{
+		game_player_equip
+		{
+			"classname" "game_player_equip"
+			"origin" "-40 756 565"
+			"angles" "0 0 0"
+			"item_suit" "1"
+		}
+	}
 }

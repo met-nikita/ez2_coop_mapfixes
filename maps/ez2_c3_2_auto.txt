@@ -1,4 +1,4 @@
-ez2_c3_1
+ez2_c3_2
 {
 //spawn coop_manager entity
 	create
@@ -13,7 +13,7 @@ ez2_c3_1
 		}
 	}
 //no backtracking
-	delete {#find_by_keyfield "hammerid 224820"}
+	delete {#find_by_keyfield "hammerid 51107"}
 //default equipment (first start, death)
 	create
 	{
