@@ -12,6 +12,17 @@ ez2_c0_1
 			"angles" "0 0 0"
 		}
 	}
+//default equipment (first start, death)
+	create
+	{
+		game_player_equip
+		{
+			"classname" "game_player_equip"
+			"origin" "-40 756 565"
+			"angles" "0 0 0"
+			"item_suit" "1"
+		}
+	}
 //create two spawn points for coop_manager to set later
 	create
 	{
@@ -62,7 +73,8 @@ ez2_c0_1
 		values
 		{
 			"OnTrigger" "coopfix_teleport1,Teleport,,0,-1"
-			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"				
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+			"OnTrigger" "coop_manager1,AddRespawnWeapon,weapon_stunstick 1,0,-1"				
 		}
 	}
 }

@@ -1,0 +1,17 @@
+ez2_c2_2
+{
+//spawn coop_manager entity
+	create
+	{
+		coop_manager
+		{
+			"classname" "coop_manager"
+			"origin" "-40 756 566"
+			"targetname" "coop_manager1"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+//no backtracking
+	delete {#find_by_keyfield "hammerid 433194"}
+}
