@@ -1,4 +1,4 @@
-ez2_c2_2
+ez2_c0_1
 {
 //spawn coop_manager entity
 	create
@@ -12,8 +12,7 @@ ez2_c2_2
 			"angles" "0 0 0"
 		}
 	}
-//no backtracking
-	delete {#find_by_keyfield "hammerid 65570"}
+//default equipment (first start, death)
 	create
 	{
 		game_player_equip
