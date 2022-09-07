@@ -21,6 +21,7 @@ ez2_c1_1
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
 			"item_suit" "1"
+			"weapon_pulsepistol" "1"
 		}
 	}
 //create two spawn points for coop_manager to set later
@@ -106,7 +107,17 @@ ez2_c1_1
 		values
 		{
 			"OnOpen" "coopfix_teleport1,Teleport,,0,-1"
-			"OnOpen" "coop_manager1,MoveSpawn,checkpoint2,0,-1"				
+			"OnOpen" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+			"OnOpen" "coop_manager1,AddRespawnWeapon,weapon_frag 2,0,-1"				
+		}
+	}
+//add ar2 to respawn weapons list once picked up by someone
+	edit
+	{
+		#find_by_keyfield "hammerid 525078"	
+		values
+		{
+			"OnPlayerPickup" "coop_manager1,AddRespawnWeapon,weapon_ar2 1,0,-1"			
 		}
 	}
 //move spawn point after pulling the lever

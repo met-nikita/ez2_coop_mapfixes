@@ -14,6 +14,24 @@ ez2_c3_3
 	}
 //no backtracking
 	delete {#find_by_keyfield "hammerid 325063"}
+//add pulsepistol to respawn weapons once it is picked up
+	edit
+	{
+		#find_by_keyfield "hammerid 21457"	
+		values
+		{
+			"OnPlayerPickup" "coop_manager1,AddRespawnWeapons,weapon_pulsepistol 1,0,-1"				
+		}
+	}
+//add 357 to respawn weapons after cage lock is broken
+	edit
+	{
+		#find_by_keyfield "hammerid 25559"	
+		values
+		{
+			"OnTakeDamage" "coop_manager1,AddRespawnWeapons,weapon_357 2,0,-1"				
+		}
+	}
 //default equipment (first start, death)
 	create
 	{

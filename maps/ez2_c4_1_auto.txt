@@ -23,6 +23,12 @@ ez2_c4_1
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
 			"item_suit" "1"
+			"weapon_ar2" "1"
+			"weapon_smg1" "1"
+			"weapon_hopwire" "2"
+			"weapon_shotgun" "1"
+			"weapon_smg2" "1"
+			"weapon_357" "1"
 		}
 	}
 }

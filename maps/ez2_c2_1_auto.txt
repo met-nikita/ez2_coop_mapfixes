@@ -1,4 +1,4 @@
-ez2_c5_1
+ez2_c2_2
 {
 //spawn coop_manager entity
 	create
@@ -12,9 +12,6 @@ ez2_c5_1
 			"angles" "0 0 0"
 		}
 	}
-//no backtracking
-	delete {#find_by_keyfield "hammerid 373412"}
-//default equipment (first start, death)
 	create
 	{
 		game_player_equip
@@ -23,15 +20,12 @@ ez2_c5_1
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
 			"item_suit" "1"
+			"weapon_pulsepistol" "1"
 			"weapon_ar2" "1"
 			"weapon_smg1" "1"
-			"weapon_hopwire" "2"
-			"weapon_shotgun" "1"
-			"weapon_smg2" "1"
-			"weapon_357" "1"
 			"weapon_frag" "2"
 			"weapon_slam" "2"
-			"weapon_crossbow" "1"
+			"weapon_smg2" "1"
 		}
 	}
 }
