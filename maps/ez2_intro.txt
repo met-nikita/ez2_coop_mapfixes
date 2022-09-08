@@ -20,7 +20,6 @@ ez2_c0_1
 			"classname" "game_player_equip"
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
-			"item_suit" "1"
 		}
 	}
 //create servercommand entity for levelchange
@@ -36,10 +35,10 @@ ez2_c0_1
 //changelevel when final sequence ends
 	edit
 	{
-		#find_by_keyfield "hammerid 97674"	
+		#find_by_keyfield "hammerid 14684"	
 		values
 		{
-			"OnCompletion" "server_command,Command,changelevel ez2_intro,5.5,-1"			
+			"OnCompletion" "server_command,Command,changelevel ez2_c1_1,13,-1"			
 		}
 	}
 }

@@ -77,4 +77,23 @@ ez2_c0_1
 			"OnTrigger" "coop_manager1,AddRespawnWeapon,weapon_stunstick 1,0,-1"				
 		}
 	}
+//create servercommand entity for levelchange
+	create
+	{
+		point_servercommand
+		{
+			"classname" "point_servercommand"
+			"origin" "-40 750 569"
+			"targetname" "server_command"
+		}
+	}
+//changelevel when final sequence ends
+	edit
+	{
+		#find_by_keyfield "hammerid 3863696"	
+		values
+		{
+			"OnCompletion" "server_command,Command,changelevel ez2_c0_2,7,-1"			
+		}
+	}
 }
