@@ -28,4 +28,60 @@ ez2_c1_3
 			"weapon_frag" "2"
 		}
 	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-3686.281250 4942.875000 210.820663"
+			"targetname" "checkpoint1"
+			"angles" "0 180 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 221037"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint1,0,-1"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-3488.000000 2986.375000 85.328911"
+			"targetname" "checkpoint2"
+			"angles" "0 -90 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 166838"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+		}
+	}
+	create
+	{
+		point_teleport
+		{
+			"classname" "point_teleport"
+			"origin" "-2993.125000 2327.593750 82.347923"
+			"targetname" "coopfix_teleport1"
+			"target" "!player"
+			"spawnflags" "0"
+			"angles" "0 -90 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 201832"
+		values
+		{
+			"OnTrigger" "coopfix_teleport1,Teleport,,0,-1"
+		}
+	}
 }

@@ -31,4 +31,40 @@ ez2_c2_2
 			"weapon_smg2" "1"
 		}
 	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-1209.031250 139.249954 706.710266"
+			"targetname" "checkpoint1"
+			"angles" "0 90 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 4615"
+		values
+		{
+			"OnOpen" "coop_manager1,MoveSpawn,checkpoint1,0,-1"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "1498.000122 -889.562500 706.704102"
+			"targetname" "checkpoint2"
+			"angles" "0 124 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 134744"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+		}
+	}
 }

@@ -32,4 +32,87 @@ ez2_c2_3
 			"weapon_smg2" "1"
 		}
 	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "501.593750 105.968704 688.126465"
+			"targetname" "fixed_start"
+			"angles" "0 0 0"
+		}
+	}
+	fire { "coop_manager1" "MoveSpawn,fixed_start,0,,,-1" }
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "1839.562500 970.593750 708.168213"
+			"targetname" "checkpoint1"
+			"angles" "0 180 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 740225"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint1,0,-1"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "1291.968750 3400.000000 709.369080"
+			"targetname" "checkpoint2"
+			"angles" "0 90 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 255438"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "2127.750000 1946.093750 931.031250"
+			"targetname" "checkpoint3"
+			"angles" "0 0 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 230511"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint3,0,-1"
+		}
+	}
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "1845.750000 1940.750000 1186.031250"
+			"targetname" "checkpoint4"
+			"angles" "0 180 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 1437216"
+		values
+		{
+			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint4,0,-1"
+		}
+	}
 }
