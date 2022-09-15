@@ -86,7 +86,7 @@ ez2_c2_4
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "-3942.406250 213.281250 592.031250;"
+			"origin" "-3942.406250 213.281250 592.031250"
 			"targetname" "checkpoint3"
 			"angles" "0 -90 0"
 		}
