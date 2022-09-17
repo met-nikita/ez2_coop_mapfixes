@@ -37,7 +37,7 @@ ez2_c2_3
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "501.593750 105.968704 688.126465"
+			"origin" "501.593750 105.968704 630.126465"
 			"targetname" "fixed_start"
 			"angles" "0 0 0"
 		}
@@ -84,7 +84,7 @@ ez2_c2_3
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "2127.750000 1946.093750 931.031250"
+			"origin" "2127.750000 1946.093750 880"
 			"targetname" "checkpoint3"
 			"angles" "0 0 0"
 		}
@@ -102,7 +102,7 @@ ez2_c2_3
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "1845.750000 1940.750000 1186.031250"
+			"origin" "1845.750000 1940.750000 1130"
 			"targetname" "checkpoint4"
 			"angles" "0 180 0"
 		}

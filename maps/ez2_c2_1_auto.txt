@@ -33,7 +33,7 @@ ez2_c2_2
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "811.906250 -125.812508 1875.873413"
+			"origin" "811.906250 -125.812508 1810.873413"
 			"targetname" "checkpoint1"
 			"angles" "0 90 0"
 		}
@@ -62,6 +62,26 @@ ez2_c2_2
 		values
 		{
 			"OnTrigger" "coop_manager1,MoveSpawn,checkpoint2,0,-1"
+		}
+	}
+	create
+	{
+		point_teleport
+		{
+			"classname" "point_teleport"
+			"origin" "811.906250 -125.812508 1810.873413"
+			"targetname" "coopfix_teleport1"
+			"target" "!player"
+			"spawnflags" "0"
+			"angles" "0 0 0"
+		}
+	}
+	edit
+	{
+		#find_by_keyfield "hammerid 5710"
+		values
+		{
+			"OnTrigger" "coopfix_teleport1,Teleport,,0,-1"
 		}
 	}
 }

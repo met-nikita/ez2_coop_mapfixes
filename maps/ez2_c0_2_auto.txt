@@ -1,4 +1,4 @@
-ez2_c0_1
+ez2_c0_2
 {
 //spawn coop_manager entity
 	create

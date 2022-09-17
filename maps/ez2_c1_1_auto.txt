@@ -50,7 +50,7 @@ ez2_c1_1
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "1192.093750 -1216.343872 2128.393066"
+			"origin" "1192.093750 -1216.343872 2050.393066"
 			"targetname" "checkpoint3"
 			"angles" "0 0 0"
 		}
@@ -60,7 +60,7 @@ ez2_c1_1
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "3580.531250 -395.343750 2127.463135"
+			"origin" "3580.531250 -395.343750 2050.463135"
 			"targetname" "checkpoint4"
 			"angles" "0 180 0"
 		}
@@ -141,7 +141,7 @@ ez2_c1_1
 //teleport everyone behind the closing door
 	edit
 	{
-		#find_by_keyfield "hammerid 261131"	
+		#find_by_keyfield "hammerid 261202"	
 		values
 		{
 			"OnOpen" "coopfix_teleport2,Teleport,,0,-1"				

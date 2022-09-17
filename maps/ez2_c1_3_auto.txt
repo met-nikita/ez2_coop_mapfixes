@@ -33,7 +33,18 @@ ez2_c1_3
 		info_player_start
 		{
 			"classname" "info_player_start"
-			"origin" "-3686.281250 4942.875000 210.820663"
+			"origin" "-3648.312500 6052.218750 24.031250"
+			"targetname" "fixed_start"
+			"angles" "0 0 0"
+		}
+	}
+	fire { "coop_manager1" "MoveSpawn,fixed_start,0,,,-1" }
+	create
+	{
+		info_player_start
+		{
+			"classname" "info_player_start"
+			"origin" "-3686.281250 4942.875000 150.820663"
 			"targetname" "checkpoint1"
 			"angles" "0 180 0"
 		}
