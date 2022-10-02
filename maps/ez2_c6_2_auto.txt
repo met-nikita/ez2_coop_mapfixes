@@ -23,6 +23,7 @@ ez2_c6_2
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
 			"item_suit" "1"
+			"weapon_pulsepistol" "1"
 			"weapon_ar2" "1"
 			"weapon_smg1" "1"
 			"weapon_hopwire" "2"
@@ -32,7 +33,7 @@ ez2_c6_2
 			"weapon_frag" "2"
 			"weapon_slam" "2"
 			"weapon_crossbow" "1"
-			"weapon_ar2proto" "1"
+			"weapon_ar2_proto" "1"
 		}
 	}
 }

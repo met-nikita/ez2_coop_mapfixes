@@ -23,6 +23,7 @@ ez2_c5_2
 			"origin" "-40 756 565"
 			"angles" "0 0 0"
 			"item_suit" "1"
+			"weapon_pulsepistol" "1"
 			"weapon_ar2" "1"
 			"weapon_smg1" "1"
 			"weapon_hopwire" "2"
