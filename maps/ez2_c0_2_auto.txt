@@ -36,7 +36,7 @@ ez2_c0_2
 //changelevel when final sequence ends
 	edit
 	{
-		#find_by_keyfield "hammerid 97674"	
+		IntroTalk3 ""	
 		values
 		{
 			"OnCompletion" "server_command,Command,changelevel ez2_intro,5.5,-1"			

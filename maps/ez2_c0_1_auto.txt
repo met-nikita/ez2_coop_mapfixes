@@ -60,10 +60,23 @@ ez2_c0_1
 //edit scripted_sequence playerPuppet_intro_main6 so the spawn point moves after it ends
 	edit
 	{
-		#find_by_origin "-920 -2096 512.237"	
+		playerPuppet_intro_main6 ""
 		values
 		{
-			"OnEndSequence" "coop_manager1,MoveSpawn,checkpoint1,0,-1"				
+			"OnEndSequence" "coop_manager1,MoveSpawn,checkpoint1,0,-1"
+//base game patch
+			"OnEndSequence" "screenFX,StopEffect,5,0,-1"
+			"OnEndSequence" "env_tonemap_controller,SetAutoExposureMax,3,0,-1"
+			"OnEndSequence" "env_tonemap_controller,SetAutoExposureMin,1.5,0,-1"
+		}
+	}
+//edit env_sprite so it doesn't spam console with errors
+	edit
+	{
+		#find_by_origin "-1176 64 695.07"	
+		values
+		{
+			"GlowProxySize" "64"				
 		}
 	}
 //edit trigger which closes the doors behind player so all players are teleported inside the room and no one is left behind
@@ -90,7 +103,7 @@ ez2_c0_1
 //changelevel when final sequence ends
 	edit
 	{
-		#find_by_keyfield "hammerid 3863696"	
+		choreo_bosstalk ""
 		values
 		{
 			"OnCompletion" "server_command,Command,changelevel ez2_c0_2,7,-1"			

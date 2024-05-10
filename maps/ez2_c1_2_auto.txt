@@ -13,7 +13,7 @@ ez2_c1_2
 		}
 	}
 //no backtracking
-	delete {#find_by_keyfield "hammerid 72355"}
+	delete {levelchange ""}
 //default equipment (first start, death)
 	create
 	{

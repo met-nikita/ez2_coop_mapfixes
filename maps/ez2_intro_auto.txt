@@ -35,7 +35,15 @@ ez2_c0_1
 //changelevel when final sequence ends
 	edit
 	{
-		#find_by_keyfield "hammerid 14684"	
+		titles_sequence ""
+		values
+		{
+			"OnCompletion" "server_command,Command,changelevel ez2_c1_1,13,-1"			
+		}
+	}
+	edit
+	{
+		titles_sequence ""
 		values
 		{
 			"OnCompletion" "server_command,Command,changelevel ez2_c1_1,13,-1"			

@@ -24,7 +24,7 @@ ez2_c1_1
 			"weapon_pulsepistol" "1"
 		}
 	}
-//create two spawn points for coop_manager to set later
+//create 4 spawn points for coop_manager to set later
 	create
 	{
 		info_player_start
@@ -103,7 +103,7 @@ ez2_c1_1
 //teleport everyone to the elevator and set spawn point at the top
 	edit
 	{
-		#find_by_keyfield "hammerid 45356"	
+		Lift_button ""	
 		values
 		{
 			"OnOpen" "coopfix_teleport1,Teleport,,0,-1"
@@ -123,7 +123,7 @@ ez2_c1_1
 //move spawn point after pulling the lever
 	edit
 	{
-		#find_by_keyfield "hammerid 490402"	
+		doorzone_button ""	
 		values
 		{
 			"OnPressed" "coop_manager1,MoveSpawn,checkpoint3,0,-1"				
@@ -132,7 +132,7 @@ ez2_c1_1
 //move spawn point after pressing the button
 	edit
 	{
-		#find_by_keyfield "hammerid 503496"	
+		PGATE_1 ""	
 		values
 		{
 			"OnOpen" "coop_manager1,MoveSpawn,checkpoint4,0,-1"				
@@ -141,7 +141,7 @@ ez2_c1_1
 //teleport everyone behind the closing door
 	edit
 	{
-		#find_by_keyfield "hammerid 261202"	
+		#find_by_origin "4488 -130 2085.87" 
 		values
 		{
 			"OnOpen" "coopfix_teleport2,Teleport,,0,-1"				
